@@ -1,8 +1,51 @@
-# Getting Started with Create React App
+# 🎬 MovieHub - Movie Browsing SPA
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A beautiful, fully-featured Single Page Application for browsing and discovering movies using The Movie Database (TMDB) API.
 
-## Available Scripts
+## ✨ Features
+
+- 🏠 **Home Page**: Welcoming landing page with animated hero section
+- 🎥 **Movies List**: Browse popular movies with search and genre filters
+- 📄 **Movie Details**: Comprehensive movie information with trailers, cast, and similar movies
+- 🔍 **Search**: Find any movie instantly
+- 🎯 **Genre Filters**: Filter movies by category
+- 🌙 **Dark Mode**: Eye-friendly dark theme with localStorage persistence
+- 📱 **Fully Responsive**: Works seamlessly on mobile, tablet, and desktop
+- ⚡ **Fast & Smooth**: Optimized performance with beautiful animations
+
+## 🚀 Getting Started with MovieHub
+
+## 🛠️ Technologies Used
+
+- **React 18**: Modern React with Hooks
+- **React Router v7**: Client-side routing
+- **Axios**: HTTP requests
+- **TMDB API**: Movie database
+- **CSS3**: Custom styling with animations
+
+## 📁 Project Structure
+
+```
+src/
+├── components/      # Reusable UI components
+├── pages/          # Page components (Home, MoviesList, MovieDetail)
+├── services/       # API service layer
+├── context/        # React Context (Theme)
+├── App.js          # Main app component
+└── index.js        # Entry point
+```
+
+## 🔑 API Key Setup
+
+The app uses TMDB API. To use your own API key:
+
+1. Get a free API key from [TMDB](https://www.themoviedb.org/settings/api)
+2. Update `src/services/api.js`:
+```javascript
+const API_KEY = 'YOUR_API_KEY_HERE';
+```
+
+## 📜 Available Scripts
 
 In the project directory, you can run:
 
@@ -68,3 +111,40 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## 🎯 Assignment Requirements Met
+
+✅ Single Page Application with routing  
+✅ External API integration (TMDB)  
+✅ Multiple routes (Home, List, Detail)  
+✅ Reusable components (Navbar, Card, Loader, etc.)  
+✅ Loading and error states  
+✅ Clean, responsive UI/UX  
+✅ **Bonus Features**: Search, Filters, Dark Mode, Animations  
+
+## 📚 Full Documentation
+
+See [PROJECT_DOCUMENTATION.md](../PROJECT_DOCUMENTATION.md) for comprehensive documentation including:
+- Technology rationale and selection
+- Complete folder structure explanation
+- API integration details
+- Routing implementation
+- Component architecture
+- State management approach
+- UI/UX design principles
+- Challenges and solutions
+- Screenshots and demos
+
+## 🎓 Key Learnings
+
+- React SPA development
+- REST API integration
+- Client-side routing with React Router
+- State management with Hooks and Context API
+- Responsive design principles
+- Error handling patterns
+- Performance optimization
+
+---
+
+**Built with ❤️ using React and TMDB API**

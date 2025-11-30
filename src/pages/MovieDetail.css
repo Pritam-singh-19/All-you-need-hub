@@ -1,0 +1,452 @@
+.movie-detail-container {
+  min-height: 100vh;
+  padding-bottom: 4rem;
+}
+
+.back-button {
+  position: fixed;
+  top: 80px;
+  left: 2rem;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #667eea;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .back-button {
+  background: rgba(31, 41, 55, 0.95);
+  color: #a78bfa;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.movie-backdrop {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.backdrop-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 1));
+}
+
+.dark-mode .backdrop-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(17, 24, 39, 1));
+}
+
+.movie-detail-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.movie-main-info {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 3rem;
+  margin-top: -200px;
+  position: relative;
+  z-index: 10;
+}
+
+.movie-poster-large {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: slideInLeft 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.movie-poster-large img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-info {
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.movie-detail-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.dark-mode .movie-detail-title {
+  color: #f9fafb;
+}
+
+.movie-tagline {
+  font-size: 1.2rem;
+  color: #6b7280;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.dark-mode .movie-tagline {
+  color: #9ca3af;
+}
+
+.movie-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.dark-mode .stat-label {
+  color: #9ca3af;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.dark-mode .stat-value {
+  color: #f9fafb;
+}
+
+.stat-value.rating {
+  color: #f59e0b;
+}
+
+.vote-count {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.movie-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.genre-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.movie-overview {
+  margin-bottom: 2rem;
+}
+
+.movie-overview h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+}
+
+.dark-mode .movie-overview h3 {
+  color: #f9fafb;
+}
+
+.movie-overview p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+.dark-mode .movie-overview p {
+  color: #d1d5db;
+}
+
+.movie-financial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.financial-item {
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dark-mode .financial-item {
+  background: #374151;
+}
+
+.financial-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.dark-mode .financial-label {
+  color: #9ca3af;
+}
+
+.financial-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 4rem 0 2rem 0;
+}
+
+.dark-mode .section-heading {
+  color: #f9fafb;
+}
+
+.trailer-section {
+  margin-top: 4rem;
+}
+
+.trailer-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.trailer-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cast-section {
+  margin-top: 4rem;
+}
+
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.cast-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.cast-card:hover {
+  transform: translateY(-5px);
+}
+
+.cast-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: #f3f4f6;
+}
+
+.dark-mode .cast-photo {
+  background: #374151;
+}
+
+.cast-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cast-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.dark-mode .cast-name {
+  color: #f9fafb;
+}
+
+.cast-character {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.dark-mode .cast-character {
+  color: #9ca3af;
+}
+
+.production-section {
+  margin-top: 4rem;
+}
+
+.production-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.production-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dark-mode .production-card {
+  background: #1f2937;
+}
+
+.production-card:hover {
+  transform: translateY(-5px);
+}
+
+.production-logo {
+  max-width: 100%;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.production-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.dark-mode .production-name {
+  color: #f9fafb;
+}
+
+.similar-section {
+  margin-top: 4rem;
+}
+
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .movie-main-info {
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+  }
+
+  .movie-detail-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    top: 70px;
+    left: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .movie-main-info {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: -100px;
+  }
+
+  .movie-poster-large {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .movie-detail-title {
+    font-size: 2rem;
+  }
+
+  .movie-stats {
+    gap: 1rem;
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .cast-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .similar-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
